@@ -1,0 +1,21 @@
+%p#notice= notice
+
+%p
+  %b Magi:
+  = @calculation.magi
+%p
+  %b Filing status:
+  = @calculation.filing_status
+%p
+  %b Age:
+  = @calculation.age
+%p
+  %b Spouse age:
+  = @calculation.spouse_age
+%p
+  %b Result:
+  = @calculation.result
+
+= link_to 'Edit', edit_calculation_path(@calculation)
+\|
+= link_to 'Back', calculations_path

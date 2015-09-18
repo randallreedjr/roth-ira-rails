@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  magi: 1
+  filing_status: MyString
+  age: 1
+  spouse_age: 1
+
+two:
+  magi: 1
+  filing_status: MyString
+  age: 1
+  spouse_age: 1

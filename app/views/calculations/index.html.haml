@@ -1,0 +1,27 @@
+%h1 Listing calculations
+
+%table
+  %thead
+    %tr
+      %th Magi
+      %th Filing status
+      %th Age
+      %th Spouse age
+      %th
+      %th
+      %th
+
+  %tbody
+    - @calculations.each do |calculation|
+      %tr
+        %td= calculation.magi
+        %td= calculation.filing_status
+        %td= calculation.age
+        %td= calculation.spouse_age
+        %td= link_to 'Show', calculation
+        %td= link_to 'Edit', edit_calculation_path(calculation)
+        %td= link_to 'Destroy', calculation, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Calculation', new_calculation_path

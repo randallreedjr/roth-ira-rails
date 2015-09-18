@@ -1,0 +1,22 @@
+= form_for @calculation do |f|
+  - if @calculation.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@calculation.errors.count, "error")} prohibited this calculation from being saved:"
+      %ul
+        - @calculation.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :magi
+    = f.number_field :magi
+  .field
+    = f.label :filing_status
+    = f.text_field :filing_status
+  .field
+    = f.label :age
+    = f.number_field :age
+  .field
+    = f.label :spouse_age
+    = f.number_field :spouse_age
+  .actions
+    = f.submit 'Save'
